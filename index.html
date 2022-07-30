@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/tittle_icon.png" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animation.css" />
+    <title>Space game</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="rules">
+        <p class="rule">Witaj podróżniku!</p>
+        <p class="rule">
+          Przed Tobą krótki 2-minutowy lot z Ziemi na Marsa. Będziesz poruszać
+          się czerwonym statkim kosmicznym (sterowanie myszką). Kiedy wlecisz w
+          przestrzeń kosmiczną uważaj na przelatujące meteoryty. Po około 2
+          minutach lotu na horyzoncie zobaczysz Marsa. Wyląduj na nim.
+          Powodzenia :)
+        </p>
+        <p class="rule">
+          Przenieś wahadłowiec na stanowisko startowe. Twój wahadłowiec
+          wystartuje za około 15s.
+        </p>
+      </div>
+
+      <div class="container">
+        <div class="game_over"></div>
+        <div class="game_place">
+          <div class="mars">
+            <p class="mars-text">Gratulujemy!</p>
+            <p class="mars-text">Misja zakończona sukcesem</p>
+          </div>
+          <div class="meteor--1">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="hp meteor--size--1"
+              viewBox="0 0 20 20"
+              fill="rgb(255,0,0)"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.332 8.027a6.012 6.012 0 011.912-2.706C6.512 5.73 6.974 6 7.5 6A1.5 1.5 0 019 7.5V8a2 2 0 004 0 2 2 0 011.523-1.943A5.977 5.977 0 0116 10c0 .34-.028.675-.083 1H15a2 2 0 00-2 2v2.197A5.973 5.973 0 0110 16v-2a2 2 0 00-2-2 2 2 0 01-2-2 2 2 0 00-1.668-1.973z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </div>
+          <div class="meteor--2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="hp meteor--size--4"
+              viewBox="0 0 20 20"
+              fill="#adb5bd"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.332 8.027a6.012 6.012 0 011.912-2.706C6.512 5.73 6.974 6 7.5 6A1.5 1.5 0 019 7.5V8a2 2 0 004 0 2 2 0 011.523-1.943A5.977 5.977 0 0116 10c0 .34-.028.675-.083 1H15a2 2 0 00-2 2v2.197A5.973 5.973 0 0110 16v-2a2 2 0 00-2-2 2 2 0 01-2-2 2 2 0 00-1.668-1.973z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </div>
+          <div class="meteor--3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="hp meteor--size--5"
+              viewBox="0 0 20 20"
+              fill="#d6336c"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.332 8.027a6.012 6.012 0 011.912-2.706C6.512 5.73 6.974 6 7.5 6A1.5 1.5 0 019 7.5V8a2 2 0 004 0 2 2 0 011.523-1.943A5.977 5.977 0 0116 10c0 .34-.028.675-.083 1H15a2 2 0 00-2 2v2.197A5.973 5.973 0 0110 16v-2a2 2 0 00-2-2 2 2 0 01-2-2 2 2 0 00-1.668-1.973z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </div>
+          <div class="meteor--4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="hp meteor--size--6"
+              viewBox="0 0 20 20"
+              fill="#ae3ec9"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.332 8.027a6.012 6.012 0 011.912-2.706C6.512 5.73 6.974 6 7.5 6A1.5 1.5 0 019 7.5V8a2 2 0 004 0 2 2 0 011.523-1.943A5.977 5.977 0 0116 10c0 .34-.028.675-.083 1H15a2 2 0 00-2 2v2.197A5.973 5.973 0 0110 16v-2a2 2 0 00-2-2 2 2 0 01-2-2 2 2 0 00-1.668-1.973z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </div>
+          <div class="meteor--5">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="hp meteor--size--1"
+              viewBox="0 0 20 20"
+              fill="#7048e8"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.332 8.027a6.012 6.012 0 011.912-2.706C6.512 5.73 6.974 6 7.5 6A1.5 1.5 0 019 7.5V8a2 2 0 004 0 2 2 0 011.523-1.943A5.977 5.977 0 0116 10c0 .34-.028.675-.083 1H15a2 2 0 00-2 2v2.197A5.973 5.973 0 0110 16v-2a2 2 0 00-2-2 2 2 0 01-2-2 2 2 0 00-1.668-1.973z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </div>
+          <div class="meteor--6">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="hp meteor--size--7"
+              viewBox="0 0 20 20"
+              fill="#4263eb"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.332 8.027a6.012 6.012 0 011.912-2.706C6.512 5.73 6.974 6 7.5 6A1.5 1.5 0 019 7.5V8a2 2 0 004 0 2 2 0 011.523-1.943A5.977 5.977 0 0116 10c0 .34-.028.675-.083 1H15a2 2 0 00-2 2v2.197A5.973 5.973 0 0110 16v-2a2 2 0 00-2-2 2 2 0 01-2-2 2 2 0 00-1.668-1.973z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </div>
+          <div class="meteor--7">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="hp meteor--size--3"
+              viewBox="0 0 20 20"
+              fill="#1c7ed6"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.332 8.027a6.012 6.012 0 011.912-2.706C6.512 5.73 6.974 6 7.5 6A1.5 1.5 0 019 7.5V8a2 2 0 004 0 2 2 0 011.523-1.943A5.977 5.977 0 0116 10c0 .34-.028.675-.083 1H15a2 2 0 00-2 2v2.197A5.973 5.973 0 0110 16v-2a2 2 0 00-2-2 2 2 0 01-2-2 2 2 0 00-1.668-1.973z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </div>
+          <div class="meteor--8">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="hp meteor--size--4"
+              viewBox="0 0 20 20"
+              fill="#1098ad"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.332 8.027a6.012 6.012 0 011.912-2.706C6.512 5.73 6.974 6 7.5 6A1.5 1.5 0 019 7.5V8a2 2 0 004 0 2 2 0 011.523-1.943A5.977 5.977 0 0116 10c0 .34-.028.675-.083 1H15a2 2 0 00-2 2v2.197A5.973 5.973 0 0110 16v-2a2 2 0 00-2-2 2 2 0 01-2-2 2 2 0 00-1.668-1.973z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </div>
+          <div class="meteor--9">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="hp meteor--size--4"
+              viewBox="0 0 20 20"
+              fill="#37b24d"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.332 8.027a6.012 6.012 0 011.912-2.706C6.512 5.73 6.974 6 7.5 6A1.5 1.5 0 019 7.5V8a2 2 0 004 0 2 2 0 011.523-1.943A5.977 5.977 0 0116 10c0 .34-.028.675-.083 1H15a2 2 0 00-2 2v2.197A5.973 5.973 0 0110 16v-2a2 2 0 00-2-2 2 2 0 01-2-2 2 2 0 00-1.668-1.973z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </div>
+          <div class="meteor--10">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="hp meteor--size--5"
+              viewBox="0 0 20 20"
+              fill="#ffd43b"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.332 8.027a6.012 6.012 0 011.912-2.706C6.512 5.73 6.974 6 7.5 6A1.5 1.5 0 019 7.5V8a2 2 0 004 0 2 2 0 011.523-1.943A5.977 5.977 0 0116 10c0 .34-.028.675-.083 1H15a2 2 0 00-2 2v2.197A5.973 5.973 0 0110 16v-2a2 2 0 00-2-2 2 2 0 01-2-2 2 2 0 00-1.668-1.973z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </div>
+          <div class="meteor--11">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="hp meteor--size--6"
+              viewBox="0 0 20 20"
+              fill="#fd7e14"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.332 8.027a6.012 6.012 0 011.912-2.706C6.512 5.73 6.974 6 7.5 6A1.5 1.5 0 019 7.5V8a2 2 0 004 0 2 2 0 011.523-1.943A5.977 5.977 0 0116 10c0 .34-.028.675-.083 1H15a2 2 0 00-2 2v2.197A5.973 5.973 0 0110 16v-2a2 2 0 00-2-2 2 2 0 01-2-2 2 2 0 00-1.668-1.973z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </div>
+          <div class="cloud--1">
+            <img src="img/cloudy.svg" alt="background" />
+          </div>
+          <div class="cloud--2">
+            <img src="img/cloudy.svg" alt="background" />
+          </div>
+          <div class="earth">
+            <div class="start">
+              <div class="start-in"></div>
+            </div>
+          </div>
+
+          <div class="game_place_bg"></div>
+        </div>
+      </div>
+      <div class="title">
+        <p class="title--game">game</p>
+        <p class="title--icon">
+          <img src="img/tittle_icon.png" alt="logo" class="title-icon" />
+        </p>
+        <p class="title--space">space</p>
+      </div>
+    </div>
+  </body>
+</html>

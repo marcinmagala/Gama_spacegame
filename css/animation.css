@@ -1,0 +1,137 @@
+@keyframes slide_bg {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(200000px);
+  }
+}
+
+@keyframes slide_earth {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(100000px);
+  }
+}
+
+@keyframes slide_mars {
+  from {
+    transform: translateY(20px);
+  }
+
+  to {
+    transform: translateY(120px);
+  }
+}
+
+@keyframes slide_meteor1 {
+  from {
+    transform: translate(50px, 0px);
+  }
+
+  to {
+    transform: translate(1250px, 350px);
+  }
+}
+
+@keyframes slide_meteor2 {
+  from {
+    transform: translate(1250px, 0px);
+  }
+  to {
+    transform: translate(-1250px, 400px);
+  }
+}
+
+@keyframes slide_meteor3 {
+  from {
+    transform: translate(50px, 200px);
+  }
+
+  to {
+    transform: translate(1250px, 850px);
+  }
+}
+
+@keyframes slide_meteor4 {
+  from {
+    transform: translate(1450px, 200px);
+  }
+
+  to {
+    transform: translate(50px, 800px);
+  }
+}
+
+@keyframes slide_meteor5 {
+  from {
+    transform: translate(1450px, 200px);
+  }
+
+  to {
+    transform: translate(50px, 1400px);
+  }
+}
+
+@keyframes slide_meteor6 {
+  from {
+    transform: translate(-700px, 0px);
+  }
+
+  to {
+    transform: translate(1150px, 1700px);
+  }
+}
+
+@keyframes slide_meteor7 {
+  from {
+    transform: translate(950px, 200px);
+  }
+
+  to {
+    transform: translate(250px, 1400px);
+  }
+}
+
+@keyframes slide_meteor8 {
+  from {
+    transform: translate(450px, 200px);
+  }
+
+  to {
+    transform: translate(650px, 1250px);
+  }
+}
+
+@keyframes slide_meteor9 {
+  from {
+    transform: translate(750px, 200px);
+  }
+
+  to {
+    transform: translate(50px, 1400px);
+  }
+}
+
+@keyframes slide_meteor10 {
+  from {
+    transform: translate(450px, 200px);
+  }
+
+  to {
+    transform: translate(400px, 1250px);
+  }
+}
+
+@keyframes slide_meteor11 {
+  from {
+    transform: translate(750px, 200px);
+  }
+
+  to {
+    transform: translate(800px, 1250px);
+  }
+}

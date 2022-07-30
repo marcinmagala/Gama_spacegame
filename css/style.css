@@ -1,0 +1,449 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(16, 16, 97);
+  background-image: url("../img/space_bg_2.jpg");
+  background-size: cover;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
+.main {
+  width: 1500px;
+  height: 713px;
+  margin: 25px auto;
+
+  display: flex;
+  justify-content: center;
+
+  cursor: url(../img/path1994.png), wait;
+
+  gap: 20px;
+}
+
+.rules {
+  flex: 1;
+  background-color: rgba(52, 58, 64, 0.8);
+  border-radius: 45px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  padding: 30px 10px;
+
+  text-align: center;
+
+  overflow: hidden;
+}
+
+.rule {
+  color: #fff;
+  font-size: 22px;
+  line-height: 1.5;
+}
+
+.container {
+  flex: 3;
+  background-color: rgba(134, 142, 150, 0.8);
+  border-radius: 45px;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+}
+
+.container:hover > .game_over {
+  transform: scale(5) translateY(-90px);
+  /* transition-duration: 5s; */
+  transition-delay: 20s;
+}
+
+.title {
+  flex: 1;
+  background-color: rgba(52, 58, 64, 0.8);
+  border-radius: 45px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  text-transform: uppercase;
+  padding: 20px 30px;
+
+  overflow: hidden;
+}
+
+.title--game {
+  font-size: 86px;
+  color: rgb(12, 18, 193);
+  letter-spacing: 15px;
+}
+
+.title--icon {
+  display: flex;
+  justify-content: center;
+}
+
+.title--icon img {
+  width: 100px;
+}
+
+.title--space {
+  font-size: 86px;
+  color: rgb(186, 7, 7);
+
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
+
+.game_place {
+  width: 70%;
+  height: 95%;
+  background-color: black;
+
+  border: solid 7px black;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(6, 29, 231, 0.486);
+
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  margin-bottom: 20px;
+
+  position: relative;
+}
+
+.game_place_bg {
+  position: absolute;
+  margin: 0 auto;
+  width: 100%;
+  height: 1000%;
+  background: rgb(0, 164, 198);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 164, 198, 1) 0%,
+    rgba(35, 39, 105, 1) 25%,
+    rgba(0, 0, 0, 1) 45%
+  );
+
+  animation-name: slide_bg;
+  animation-duration: 1500s;
+
+  animation-delay: 35s;
+  z-index: 1;
+}
+
+.earth {
+  position: absolute;
+  width: 110%;
+  height: 20%;
+  top: 80%;
+  background-color: #257c35;
+  z-index: 2;
+
+  animation-name: slide_earth;
+  animation-duration: 1500s;
+  animation-delay: 35s;
+
+  display: flex;
+  justify-content: center;
+}
+
+.cloud--1 {
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  height: 100px;
+  width: 150px;
+
+  animation-name: slide_earth;
+  animation-duration: 1500s;
+  animation-delay: 35s;
+
+  z-index: 2;
+}
+
+.cloud--2 {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  height: 100px;
+  width: 150px;
+
+  animation-name: slide_earth;
+  animation-duration: 1500s;
+  animation-delay: 35s;
+
+  z-index: 2;
+}
+
+.mars {
+  position: absolute;
+  width: 110%;
+  height: 130%;
+  top: -137%;
+  background-color: #d9480f;
+  box-shadow: 0 15px 45px rgba(209, 121, 14, 0.6);
+
+  border-radius: 0px 0px 200px 200px;
+
+  animation-name: slide_mars;
+  animation-duration: 5s;
+  animation-delay: 155s;
+
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+
+  transition-property: transform;
+  transition-delay: 1000s;
+  transition-duration: 25s;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  gap: 50px;
+  padding: 200px 30px;
+
+  z-index: 2;
+}
+
+.mars:hover {
+  transform: translateY(400px);
+
+  animation: none;
+
+  z-index: 3;
+}
+
+.mars-text {
+  color: #000;
+  font-size: 32px;
+  text-transform: uppercase;
+}
+
+.start {
+  width: 30%;
+  height: 70%;
+
+  border-radius: 0px 0px 200px 200px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.8);
+
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+}
+
+.start-in {
+  width: 40%;
+  height: 40%;
+
+  border-radius: 0px 0px 200px 200px;
+
+  background-color: #555;
+}
+
+.game_over {
+  position: absolute;
+
+  width: 45%;
+  height: 50%;
+}
+.game_over:hover {
+  z-index: 500;
+  cursor: not-allowed;
+  backdrop-filter: blur(8px);
+}
+
+.hp {
+  background-color: rgba(255, 0, 0, 0.15);
+  border-radius: 100%;
+  padding: 0px;
+
+  transition: 150s;
+  clip-path: circle();
+}
+
+.hp:hover {
+  transition: 3s;
+  transform: scale(200);
+  z-index: 500;
+  cursor: url(../img/skull.png), pointer;
+}
+
+.meteor--size--1 {
+  width: 100px;
+}
+.meteor--size--2 {
+  width: 120px;
+}
+.meteor--size--3 {
+  width: 140px;
+}
+.meteor--size--4 {
+  width: 160px;
+}
+.meteor--size--5 {
+  width: 180px;
+}
+.meteor--size--6 {
+  width: 240px;
+}
+.meteor--size--7 {
+  width: 440px;
+}
+
+.meteor--1 {
+  position: absolute;
+  left: -400px;
+  bottom: 600px;
+  animation-name: slide_meteor1;
+  animation-duration: 4s;
+  animation-delay: 55s;
+
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  z-index: 2;
+  animation-direction: alternate;
+}
+
+.meteor--2 {
+  position: absolute;
+  left: -400px;
+  bottom: 200px;
+  animation-name: slide_meteor2;
+  animation-duration: 17s;
+  animation-delay: 97s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+
+  z-index: 2;
+}
+.meteor--3 {
+  position: absolute;
+  left: -400px;
+  bottom: 1000px;
+  animation-name: slide_meteor3;
+  animation-duration: 10s;
+  animation-delay: 59s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+
+  z-index: 2;
+}
+.meteor--4 {
+  position: absolute;
+  left: -400px;
+  bottom: 1000px;
+  animation-name: slide_meteor4;
+  animation-duration: 9s;
+  animation-delay: 61s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+
+  z-index: 2;
+}
+.meteor--5 {
+  position: absolute;
+  left: -400px;
+  bottom: 1000px;
+  animation-name: slide_meteor5;
+  animation-duration: 7s;
+  animation-delay: 63s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+
+  z-index: 2;
+}
+
+.meteor--6 {
+  position: absolute;
+  left: -400px;
+  bottom: 1000px;
+  animation-name: slide_meteor6;
+  animation-duration: 30s;
+  animation-delay: 65s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+
+  z-index: 2;
+}
+
+.meteor--7 {
+  position: absolute;
+  left: -400px;
+  bottom: 1000px;
+  animation-name: slide_meteor7;
+  animation-duration: 8s;
+  animation-delay: 67s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+
+  z-index: 2;
+}
+.meteor--8 {
+  position: absolute;
+  left: -400px;
+  bottom: 1000px;
+  animation-name: slide_meteor8;
+  animation-duration: 8s;
+  animation-delay: 109s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+
+  z-index: 2;
+}
+.meteor--9 {
+  position: absolute;
+  left: -400px;
+  bottom: 1000px;
+  animation-name: slide_meteor9;
+  animation-duration: 5s;
+  animation-delay: 91s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+
+  z-index: 2;
+}
+.meteor--10 {
+  position: absolute;
+  left: -400px;
+  bottom: 1000px;
+  animation-name: slide_meteor10;
+  animation-duration: 9s;
+  animation-delay: 83s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+
+  z-index: 2;
+}
+.meteor--11 {
+  position: absolute;
+  left: -400px;
+  bottom: 1000px;
+  animation-name: slide_meteor11;
+  animation-duration: 9s;
+  animation-delay: 95s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+
+  z-index: 2;
+}
